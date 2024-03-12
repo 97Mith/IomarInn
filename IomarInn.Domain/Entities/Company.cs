@@ -1,4 +1,5 @@
 using System.Net.Mail;
+using IomarInn.Domain.Validation;
 using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Entities;
@@ -26,6 +27,10 @@ public sealed class Company
         ICollection<Guest> employees
         )
     {
+        ValidationMethods.IdValidation(
+            value: id, 
+            message:"ID cannot be negative."
+        );
         Id = id;
         
         CompanyName = new CompanyName(fantasyName: name, corporateReason: corporateReason);

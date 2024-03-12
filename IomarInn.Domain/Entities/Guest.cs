@@ -18,8 +18,18 @@ public sealed class Guest
         string? phoneNumber
         )
     {
+        ValidationMethods.IdValidation(
+            value: id, 
+            message:"ID cannot be negative."
+        );
         Id = id;
+
+        ValidationMethods.IdValidation(
+            value: companyId, 
+            message:"Company ID cannot be negative."
+        );
         CompanyId = companyId;
+
         FullName = new EmployeeName(firstName: firstName, lastName: lastName);
 
         if (cpf != null)

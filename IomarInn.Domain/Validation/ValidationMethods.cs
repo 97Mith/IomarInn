@@ -4,6 +4,14 @@ namespace IomarInn.Domain.Validation;
 
 public class ValidationMethods
 {
+    public static void IdValidation(int value, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: value < 0, 
+                error: message
+            );
+    }
     public static void IsNullOrEmpty(string value, string message)
     {
         DomainExceptionValidation
