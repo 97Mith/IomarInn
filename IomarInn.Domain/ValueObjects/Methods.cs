@@ -1,7 +1,14 @@
+using System.Text.RegularExpressions;
+
 namespace IomarInn.Domain.ValueObjects;
 
 public class Methods
 {
+    public static bool IsPhoneNumber(string phoneNumber)
+    {
+        string pattern = @"^\+(?:[0-9] ?){6,14}[0-9]$";
+        return Regex.IsMatch(input: phoneNumber,pattern: pattern);
+    }
     public static bool IsCnpj(string cnpj)
     {
         int[] multiplicador1 = new int[12] {5,4,3,2,9,8,7,6,5,4,3,2};

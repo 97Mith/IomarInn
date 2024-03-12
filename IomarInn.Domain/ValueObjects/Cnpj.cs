@@ -15,10 +15,11 @@ public class Cnpj
         );
         
         ValidateMethods
-            .ValidateCnpj(
+            .CnpjValidation(
                 value: cnpj, 
                 message: "Invalid CNPJ."
         );
-        
+
+        Value = cnpj;
     }
 }

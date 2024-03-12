@@ -8,9 +8,11 @@ public class Cpf
 
     public Cpf(string cpf)
     {
-        ValidateMethods.ValidateCpf(
+        ValidateMethods.CpfValidation(
             value: cpf, 
             message:"Invalid CPF."
         );
+
+        Value = cpf;
     }
 }

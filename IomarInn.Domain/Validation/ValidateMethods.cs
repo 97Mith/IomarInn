@@ -27,7 +27,7 @@ public class ValidateMethods
             );
     }
 
-    public static void ValidateCnpj(string value, string message)
+    public static void CnpjValidation(string value, string message)
     {
         DomainExceptionValidation
             .When(
@@ -36,7 +36,7 @@ public class ValidateMethods
             );
     }
 
-    public static void ValidateCpf(string value, string message)
+    public static void CpfValidation(string value, string message)
     {
         DomainExceptionValidation
             .When(
@@ -44,5 +44,13 @@ public class ValidateMethods
                 error: message
             );
     }
-    
+
+    public static void PhoneNumberValidation(string phoneNumber, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: !Methods.IsPhoneNumber(phoneNumber),
+                error: message
+            );
+    }
 }

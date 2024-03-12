@@ -11,8 +11,8 @@ public class EmployeeName
     {
         ValidateMethods
             .IsNullOrEmpty(
-            value: firstName, 
-            message:"Name cannot be blank."
+                value: firstName, 
+                message:"Name cannot be blank."
         );
         
         ValidateMethods
@@ -24,10 +24,11 @@ public class EmployeeName
         
         if (!string.IsNullOrEmpty(lastName))
         {
-            ValidateMethods.StringLengthLimits(
-                value: lastName,
-                minimum: 2, maximum: 20,
-                message: "Last name must have between 2 and 20 characters."
+            ValidateMethods
+                .StringLengthLimits(
+                    value: lastName,
+                    minimum: 2, maximum: 20,
+                    message: "Last name must have between 2 and 20 characters."
             );
         }
 
