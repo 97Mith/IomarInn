@@ -1,3 +1,5 @@
+using IomarInn.Domain.ValueObjects;
+
 namespace IomarInn.Domain.Validation;
 
 public class ValidateMethods
@@ -11,7 +13,7 @@ public class ValidateMethods
             );
     }
     
-    public static void StringLenghtLimits(string value, int minimum, int maximum, string message)
+    public static void StringLengthLimits(string value, int minimum, int maximum, string message)
     {
         DomainExceptionValidation
             .When(
@@ -24,6 +26,23 @@ public class ValidateMethods
                 error: message
             );
     }
-    
+
+    public static void ValidateCnpj(string value, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: !Methods.IsCnpj(value),
+                error: message
+            );
+    }
+
+    public static void ValidateCpf(string value, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: !Methods.IsCpf(value), 
+                error: message
+            );
+    }
     
 }

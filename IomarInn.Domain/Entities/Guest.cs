@@ -16,14 +16,15 @@ public sealed class Guest
         Id = id;
     }
 
-    public Guest(
-        int id, 
-        int companyId, 
-        string name, 
-        string cpf, 
-        string phoneNumber
-        )
+    public Guest(int id, int companyId, string name, string cpf, string phoneNumber)
     {
+        Id = id;
+        CompanyId = companyId;
+        ValidateMethods
+            .IsNullOrEmpty(
+                value: name, 
+                message: "Name cannot be blank"
+                );
     }
 
     
