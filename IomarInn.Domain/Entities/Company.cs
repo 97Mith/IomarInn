@@ -15,6 +15,10 @@ public sealed class Company
 
     public Company(int id)
     {
+        ValidationMethods.IdValidation(
+            value: id, 
+            message:"ID cannot be negative."
+        );
         Id = id;
     }
 
