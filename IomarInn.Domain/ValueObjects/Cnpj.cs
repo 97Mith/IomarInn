@@ -5,7 +5,6 @@ namespace IomarInn.Domain.ValueObjects;
 public class Cnpj
 {
     public string Value { get; private set; }
-
     
     public Cnpj(string cnpj)
     {
