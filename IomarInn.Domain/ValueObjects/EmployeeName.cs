@@ -9,13 +9,13 @@ public class EmployeeName
 
     public EmployeeName(string firstName, string? lastName = null)
     {
-        ValidateMethods
+        ValidationMethods
             .IsNullOrEmpty(
                 value: firstName, 
                 message:"Name cannot be blank."
         );
         
-        ValidateMethods
+        ValidationMethods
             .StringLengthLimits(
                 value: firstName, 
                 minimum: 2, maximum: 20, 
@@ -24,7 +24,7 @@ public class EmployeeName
         
         if (!string.IsNullOrEmpty(lastName))
         {
-            ValidateMethods
+            ValidationMethods
                 .StringLengthLimits(
                     value: lastName,
                     minimum: 2, maximum: 20,

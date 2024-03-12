@@ -8,13 +8,13 @@ public class Cnpj
     
     public Cnpj(string cnpj)
     {
-        ValidateMethods
+        ValidationMethods
             .IsNullOrEmpty(
                 value: cnpj, 
                 message:"CNPJ field cannot be blank."
         );
         
-        ValidateMethods
+        ValidationMethods
             .CnpjValidation(
                 value: cnpj, 
                 message: "Invalid CNPJ."

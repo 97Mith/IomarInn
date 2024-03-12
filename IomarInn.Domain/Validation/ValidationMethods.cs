@@ -2,7 +2,7 @@ using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Validation;
 
-public class ValidateMethods
+public class ValidationMethods
 {
     public static void IsNullOrEmpty(string value, string message)
     {

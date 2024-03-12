@@ -7,24 +7,26 @@ public sealed class Guest
 {
     public int Id { get; private set; }
     public int CompanyId { get; private set; }
-    public string Name { get; private set; }
-    public Cpf Cpf { get; private set; }
-    public PhoneNumber PhoneNumber { get; private set; }
-
-    public Guest(int id)
-    {
-        Id = id;
-    }
-
-    public Guest(int id, int companyId, string name, string cpf, string phoneNumber)
+    public EmployeeName FullName { get; private set; }
+    public Cpf? Cpf { get; private set; }
+    public PhoneNumber? PhoneNumber { get; private set; }
+    
+    public Guest(
+        int id, int companyId, 
+        string firstName, string? lastName,
+        string? cpf, 
+        string? phoneNumber
+        )
     {
         Id = id;
         CompanyId = companyId;
-        ValidateMethods
-            .IsNullOrEmpty(
-                value: name, 
-                message: "Name cannot be blank"
-                );
+        FullName = new EmployeeName(firstName: firstName, lastName: lastName);
+
+        if (cpf != null)
+            Cpf = new Cpf(cpf);
+
+        if (phoneNumber != null)
+            PhoneNumber = new PhoneNumber(phoneNumber);
     }
 
     

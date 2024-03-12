@@ -8,7 +8,7 @@ public class PhoneNumber
 
     public PhoneNumber(string value)
     {
-        ValidateMethods
+        ValidationMethods
             .PhoneNumberValidation(
                 phoneNumber: value, 
                 message: "Phone Number is invalid."
