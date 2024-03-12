@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IomarInn.Application\IomarInn.Application.csproj" />
+      <ProjectReference Include="..\IomarInn.Domain\IomarInn.Domain.csproj" />
+      <ProjectReference Include="..\IomarInn.Infra.Data\IomarInn.Infra.Data.csproj" />
+    </ItemGroup>
+
+</Project>
