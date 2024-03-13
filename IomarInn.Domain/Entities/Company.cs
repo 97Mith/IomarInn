@@ -9,7 +9,7 @@ public sealed class Company
     public int Id { get; private set; }
     public CompanyName CompanyName { get; private set; }
     public Cnpj Cnpj { get; private set; }
-    public MailAddress Email { get; private set; }
+    public Email Email { get; private set; }
     public PhoneNumber PhoneNumber { get; private set; }
     public ICollection<Guest> Employees { get; private set; }
     
@@ -31,9 +31,10 @@ public sealed class Company
         ICollection<Guest> employees
         )
     {
-        ValidationMethods.IdValidation(
-            value: id, 
-            message:"ID cannot be negative."
+        ValidationMethods
+            .IdValidation(
+                value: id, 
+                message:"ID cannot be negative."
         );
         Id = id;
         
@@ -42,7 +43,7 @@ public sealed class Company
         Cnpj = new Cnpj(cnpj);
         
         if (email != null)
-            Email = new MailAddress(email);
+            Email = new Email(email);
 
         if (phoneNumber != null)
             PhoneNumber = new PhoneNumber(phoneNumber);
@@ -59,20 +60,7 @@ public sealed class Company
     
     public void UpdateEmail(string value)
     {
-        ValidationMethods
-            .IsNullOrEmpty(
-                value:value, 
-                message:"Email cannot be blank"
-            );
-        
-        ValidationMethods
-            .StringLengthLimits(
-                value: value, 
-                minimum: 4, maximum: 20,
-                message: "The email must have between 5 and 20 characters"
-            );
-        
-        Email = new MailAddress(value);
+        Email = new Email(value);
     }
 
     public void UpdatePhoneNumber(string value)

@@ -39,5 +39,19 @@ public sealed class Guest
             PhoneNumber = new PhoneNumber(phoneNumber);
     }
 
+    public void UpdateName(string firstName, string lastName)
+    {
+        FullName = new EmployeeName(firstName: firstName, lastName: lastName);
+    }
+
+    public void UpdateCpf(string value)
+    {
+        Cpf = new Cpf(value);
+    }
+
+    public void UpdatePhoneNumber(string value)
+    {
+        PhoneNumber = new PhoneNumber(value);
+    }
     
 }
