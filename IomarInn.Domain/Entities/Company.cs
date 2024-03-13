@@ -1,4 +1,3 @@
-using System.Net.Mail;
 using IomarInn.Domain.Validation;
 using IomarInn.Domain.ValueObjects;
 

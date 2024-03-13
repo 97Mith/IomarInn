@@ -1,4 +1,5 @@
 using IomarInn.Domain.Validation;
+using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Entities;
 
@@ -8,8 +9,8 @@ public sealed class Bedroom
     public List<int> GuestsIds { get; set; }
     public int CompanyId { get; set; }
     public int Capacity { get; private set; }
-    public decimal Price { get; private set; }
-    public decimal Discount { get; private set; }
+    public Price Price { get; private set; }
+    public Discount Discount { get; private set; }
 
     public void UpdateGuests(List<int> guestsIds)
     {
@@ -29,24 +30,12 @@ public sealed class Bedroom
 
     public void UpdatePrice(decimal price)
     {
-        ValidationMethods
-            .FormatPriceMinimum(
-                value: price, 
-                minimum:0, 
-                message:"Price is invalid."
-            );
-        Price = price;
+        Price = new Price(price);
     }
 
     public void UpdateDiscount(decimal value)
     {
-        ValidationMethods
-            .FormatPriceMaximum(
-                value: value, 
-                maximum: Price, 
-                message:"Discount must be less than price."
-            );
-        Discount = value;
+        Discount = new Discount(discountValue: value, price: Price.Value);
     }
 
     public void UpdateCapacity(int value)
@@ -88,13 +77,6 @@ public sealed class Bedroom
         );
         
         ValidationMethods
-            .FormatPriceMinimum(
-                value: price, 
-                minimum:0, 
-                message:"Price is invalid."
-        ); 
-        
-        ValidationMethods
             .FormatPriceMaximum(
                 value: discount, 
                 maximum: price, 
@@ -105,8 +87,8 @@ public sealed class Bedroom
         GuestsIds = new List<int>(guestsIds);
         CompanyId = companyId;
         Capacity = capacity;
-        Price = price;
-        Discount = discount;
+        Price = new Price(price);
+        Discount = new Discount(discountValue: discount, price: price);
 
     }
 }
