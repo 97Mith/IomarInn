@@ -11,8 +11,57 @@ public sealed class Bedroom
     public decimal Price { get; private set; }
     public decimal Discount { get; private set; }
 
+    public void UpdateGuests(List<int> guestsIds)
+    {
+        ValidationMethods
+            .FormatIntMaximum(
+                value: guestsIds.Count, 
+                maximum:Capacity, 
+                message:"Capacity overflow."
+            );
+        GuestsIds = guestsIds;
+    }
+
+    public void UpdateCompanyId(int companyId)
+    {
+        CompanyId = companyId;
+    }
+
+    public void UpdatePrice(decimal price)
+    {
+        ValidationMethods
+            .FormatPriceMinimum(
+                value: price, 
+                minimum:0, 
+                message:"Price is invalid."
+            );
+        Price = price;
+    }
+
+    public void UpdateDiscount(decimal value)
+    {
+        ValidationMethods
+            .FormatPriceMaximum(
+                value: value, 
+                maximum: Price, 
+                message:"Discount must be less than price."
+            );
+        Discount = value;
+    }
+
+    public void UpdateCapacity(int value)
+    {
+        ValidationMethods
+            .FormatIntMinimum(
+                value: value, 
+                minimum: 1, 
+                message:"Capacity cannot be zero or negative."
+            );
+        Capacity = value;
+    }
     public Bedroom(
-        int id, List<int> guestsIds, int companyId,
+        int id, 
+        List<int> guestsIds, int companyId,
         int capacity,
         decimal price,
         decimal discount
