@@ -7,6 +7,7 @@ public class CompanyName
     public string FantasyName { get; private set; }
     public string CorporateReason { get; private set; }
 
+    
     public CompanyName(string fantasyName, string corporateReason)
     {
         ValidationMethods

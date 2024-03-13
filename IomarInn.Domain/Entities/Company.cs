@@ -12,7 +12,7 @@ public sealed class Company
     public MailAddress Email { get; private set; }
     public PhoneNumber PhoneNumber { get; private set; }
     public ICollection<Guest> Employees { get; private set; }
-
+    
     public Company(int id)
     {
         ValidationMethods.IdValidation(
@@ -49,5 +49,39 @@ public sealed class Company
 
         Employees = new List<Guest>(employees);
     }
+    public void UpdateName(string companyName, string corporateReason)
+    {
+        CompanyName = new CompanyName(
+            fantasyName: companyName, 
+            corporateReason: corporateReason
+        );
+    }
     
+    public void UpdateEmail(string value)
+    {
+        ValidationMethods
+            .IsNullOrEmpty(
+                value:value, 
+                message:"Email cannot be blank"
+            );
+        
+        ValidationMethods
+            .StringLengthLimits(
+                value: value, 
+                minimum: 4, maximum: 20,
+                message: "The email must have between 5 and 20 characters"
+            );
+        
+        Email = new MailAddress(value);
+    }
+
+    public void UpdatePhoneNumber(string value)
+    {
+        PhoneNumber = new PhoneNumber(value);
+    }
+
+    public void UpdateEmployees(ICollection<Guest> guests)
+    {
+        Employees = new List<Guest>(guests);
+    }
 }

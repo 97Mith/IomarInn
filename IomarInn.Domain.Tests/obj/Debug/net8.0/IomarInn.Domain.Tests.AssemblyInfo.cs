@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("IomarInn.ViewUI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("IomarInn.Domain.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86aad64d5fb67fb1fbc8bb75618fe56129d2e400")]
-[assembly: System.Reflection.AssemblyProductAttribute("IomarInn.ViewUI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("IomarInn.ViewUI")]
+[assembly: System.Reflection.AssemblyProductAttribute("IomarInn.Domain.Tests")]
+[assembly: System.Reflection.AssemblyTitleAttribute("IomarInn.Domain.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

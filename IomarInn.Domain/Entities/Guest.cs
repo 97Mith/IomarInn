@@ -6,7 +6,7 @@ namespace IomarInn.Domain.Entities;
 public sealed class Guest
 {
     public int Id { get; private set; }
-    public int CompanyId { get; private set; }
+    public int CompanyId { get; set; }
     public EmployeeName FullName { get; private set; }
     public Cpf? Cpf { get; private set; }
     public PhoneNumber? PhoneNumber { get; private set; }

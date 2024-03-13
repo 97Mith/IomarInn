@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IomarInn.Infra.IoC", "Iomar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IomarInn.ViewUI", "IomarInn.ViewUI\IomarInn.ViewUI.csproj", "{15132EA0-BFBB-4C77-9A02-5DCA8544C51F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IomarInn.Domain.Tests", "IomarInn.Domain.Tests\IomarInn.Domain.Tests.csproj", "{F31F93D7-9FAC-4EDC-A37F-8431F511F7AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{15132EA0-BFBB-4C77-9A02-5DCA8544C51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15132EA0-BFBB-4C77-9A02-5DCA8544C51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15132EA0-BFBB-4C77-9A02-5DCA8544C51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F31F93D7-9FAC-4EDC-A37F-8431F511F7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31F93D7-9FAC-4EDC-A37F-8431F511F7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31F93D7-9FAC-4EDC-A37F-8431F511F7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31F93D7-9FAC-4EDC-A37F-8431F511F7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
