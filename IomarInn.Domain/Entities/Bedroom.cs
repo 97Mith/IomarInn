@@ -18,36 +18,40 @@ public sealed class Bedroom
         decimal discount
         )
     {
-        DomainExceptionValidation
-            .When(
-                hasError: id < 0, 
-                error: "ID cannot be negative." 
-            );
+        ValidationMethods
+            .IdValidation(
+                value: id, 
+                message:"ID cannot be negative"
+        );
         
-        DomainExceptionValidation
-            .When(
-                hasError: capacity < 1,
-                error: "Capacity cannot be zero or negative."
-            );
+        ValidationMethods
+            .FormatIntMinimum(
+                value: capacity, 
+                minimum: 1, 
+                message:"Capacity cannot be zero or negative."
+        );
         
-        DomainExceptionValidation
-            .When(
-                hasError: guestsIds.Count > capacity,
-                error: "Capacity overflow."
-            );
+        ValidationMethods
+            .FormatIntMaximum(
+                value: guestsIds.Count, 
+                maximum:capacity, 
+                message:"Capacity overflow."
+        );
         
-        DomainExceptionValidation
-            .When(
-                hasError: price < 0,
-                error: "Price cannot be negative."
-            );
+        ValidationMethods
+            .FormatPriceMinimum(
+                value: price, 
+                minimum:0, 
+                message:"Price is invalid."
+        ); 
         
-        DomainExceptionValidation
-            .When(
-                hasError: discount > price,
-                error: "Discount must be less than price."
-            );
-        
+        ValidationMethods
+            .FormatPriceMaximum(
+                value: discount, 
+                maximum: price, 
+                message:"Discount must be less than price."
+        );
+
         BedroomNumber = id;
         GuestsIds = new List<int>(guestsIds);
         CompanyId = companyId;

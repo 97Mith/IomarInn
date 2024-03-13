@@ -12,6 +12,41 @@ public class ValidationMethods
                 error: message
         );
     }
+
+    public static void FormatPriceMinimum(decimal value, decimal minimum, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: value < minimum, 
+                error: message
+        );
+    }
+    
+    public static void FormatIntMinimum(int value, int minimum, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: value < minimum, 
+                error: message
+        );
+    }
+    public static void FormatIntMaximum(int value, int maximum, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: value > maximum, 
+                error: message
+        );
+    }
+    
+    public static void FormatPriceMaximum(decimal value, decimal maximum, string message)
+    {
+        DomainExceptionValidation
+            .When(
+                hasError: value > maximum, 
+                error: message
+            );
+    }
     public static void IsNullOrEmpty(string value, string message)
     {
         DomainExceptionValidation
