@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IomarInn.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4d734973e0e2c18910703363a49307c8cedbca8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a35550c6456a051cd62e10bb1036f877aa8a791b")]
 [assembly: System.Reflection.AssemblyProductAttribute("IomarInn.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IomarInn.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

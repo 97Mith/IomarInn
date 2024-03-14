@@ -1,0 +1,12 @@
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\bin\Debug\net8.0\IomarInn.Domain.deps.json
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\bin\Debug\net8.0\IomarInn.Domain.dll
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\bin\Debug\net8.0\IomarInn.Domain.pdb
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.AssemblyInfoInputs.cache
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.AssemblyInfo.cs
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.sourcelink.json
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.dll
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\refint\IomarInn.Domain.dll
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\IomarInn.Domain.pdb
+C:\Users\Matheus\RiderProjects\IomarInnBedRoomManager\IomarInn.Domain\obj\Debug\net8.0\ref\IomarInn.Domain.dll

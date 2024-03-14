@@ -9,6 +9,13 @@ public class Discount
     public Discount(decimal discountValue, decimal price)
     {
         ValidationMethods
+            .FormatPriceMinimum(
+                value: discountValue,
+                minimum: 0,
+                message:"Discount cannot be negative." 
+        );
+        
+        ValidationMethods
             .FormatPriceMaximum(
                 value: discountValue, 
                 maximum: price, 
