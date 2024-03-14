@@ -3,9 +3,8 @@ using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Entities;
 
-public sealed class Company
+public sealed class Company : EntityBase
 {
-    public int Id { get; private set; }
     public CompanyName CompanyName { get; private set; }
     public Cnpj Cnpj { get; private set; }
     public Email Email { get; private set; }

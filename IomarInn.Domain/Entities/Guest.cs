@@ -3,9 +3,8 @@ using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Entities;
 
-public sealed class Guest
+public sealed class Guest : EntityBase
 {
-    public int Id { get; private set; }
     public int CompanyId { get; set; }
     public EmployeeName FullName { get; private set; }
     public Cpf? Cpf { get; private set; }

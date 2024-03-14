@@ -3,12 +3,11 @@ using IomarInn.Domain.ValueObjects;
 
 namespace IomarInn.Domain.Entities;
 
-public sealed class Bedroom
+public sealed class Bedroom : EntityBase
 {
-    public int BedroomNumber { get; private set; }
     public List<int> GuestsIds { get; set; }
     public int CompanyId { get; set; }
-    public int Capacity { get; private set; }
+    public MaximumCapacity Capacity { get; private set; }
     public Price Price { get; private set; }
     public Discount Discount { get; private set; }
 
@@ -17,7 +16,7 @@ public sealed class Bedroom
         ValidationMethods
             .FormatIntMaximum(
                 value: guestsIds.Count, 
-                maximum:Capacity, 
+                maximum:Capacity.Value, 
                 message:"Capacity overflow."
             );
         GuestsIds = guestsIds;
@@ -40,13 +39,7 @@ public sealed class Bedroom
 
     public void UpdateCapacity(int value)
     {
-        ValidationMethods
-            .FormatIntMinimum(
-                value: value, 
-                minimum: 1, 
-                message:"Capacity cannot be zero or negative."
-            );
-        Capacity = value;
+        Capacity = new MaximumCapacity(value);
     }
     public Bedroom(
         int id, 
@@ -83,10 +76,10 @@ public sealed class Bedroom
                 message:"Discount must be less than price."
         );
 
-        BedroomNumber = id;
+        Id = id;
         GuestsIds = new List<int>(guestsIds);
         CompanyId = companyId;
-        Capacity = capacity;
+        Capacity = new MaximumCapacity(capacity);
         Price = new Price(price);
         Discount = new Discount(discountValue: discount, price: price);
 
