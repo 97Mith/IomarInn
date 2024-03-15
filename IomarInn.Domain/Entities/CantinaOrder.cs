@@ -5,8 +5,8 @@ namespace IomarInn.Domain.Entities;
 
 public sealed class CantinaOrder : EntityBase
 {
-    private List<Product> Products { get; }
-    private int CompanyId { get; set; }
+    public List<Product> Products { get; }
+    public int CompanyId { get; set; }
 
     public CantinaOrder(int id, List<Product> products, int companyId)
     {

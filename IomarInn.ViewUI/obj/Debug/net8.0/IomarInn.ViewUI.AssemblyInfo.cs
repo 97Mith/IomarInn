@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IomarInn.ViewUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a35550c6456a051cd62e10bb1036f877aa8a791b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e925f72e776f5338f45054d2c12fe8197d0b80f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("IomarInn.ViewUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IomarInn.ViewUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

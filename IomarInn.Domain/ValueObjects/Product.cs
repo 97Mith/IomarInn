@@ -27,7 +27,7 @@ public sealed class Product
         ValidationMethods
             .StringLengthLimits(
                 value: descripton, 
-                minimum: 4, maximum: 30, 
+                minimum: 5, maximum: 30, 
                 message:"Description must have between 5 and 30 characters."
         );
 

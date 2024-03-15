@@ -21,5 +21,7 @@ public class Discount
                 maximum: price, 
                 message:"Discount must be less than price."
             );
+
+        Value = discountValue;
     }
 }

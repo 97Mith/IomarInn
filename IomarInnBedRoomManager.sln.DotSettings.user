@@ -9,9 +9,20 @@
       &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.ValueObjects.CompanyNameTests.CreateCompanyName_WithFantasyNameOutOfLengthLimits_MustHaveError&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.ValueObjects.CompanyNameTests.CreateCompanyName_WithCorporateReasonOutOfLengthLimits_MustHaveError&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.ValueObjects.EmailTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.ValueObjects.MaximumCapacityTests.CreateMaximumCapacity_WithRightParameters_MustBeSuccessful&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.Entities.CompanyTests.CreateCompany_WithRightParameters_MustBeSuccessful&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::F31F93D7-9FAC-4EDC-A37F-8431F511F7AB::net8.0::IomarInn.Domain.Tests.Entities.GuestTests.CreateGuest_WithRightParameters_MustBeSuccessful&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:PriceTests.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:CpfTests.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:DiscountTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:MaximumCapacityTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:PhoneNumberTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:ValueObjects/f:ProductTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:Entities/f:BedroomTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:Entities/f:CompanyTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:Entities/f:CantinaOrderTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:Entities/f:GuestTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;F31F93D7-9FAC-4EDC-A37F-8431F511F7AB/d:Entities/f:LaundryTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
