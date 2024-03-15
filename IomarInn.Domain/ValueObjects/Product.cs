@@ -5,11 +5,11 @@ namespace IomarInn.Domain.ValueObjects;
 public sealed class Product
 {
     public int Quantity { get; private set; }
-    public string Descripton { get; private set; }
+    public string Description { get; private set; }
     public Price UnitaryPrice { get; private set; }
     public decimal TotalValue { get; private set; }
 
-    public Product(int quantity, string descripton, decimal price)
+    public Product(int quantity, string description, decimal price)
     {
         ValidationMethods
             .FormatIntMinimum(
@@ -20,19 +20,19 @@ public sealed class Product
         
         ValidationMethods
             .IsNullOrEmpty(
-                value: descripton, 
+                value: description, 
                 message: "Description must be informed."
         );
         
         ValidationMethods
             .StringLengthLimits(
-                value: descripton, 
+                value: description, 
                 minimum: 5, maximum: 30, 
                 message:"Description must have between 5 and 30 characters."
         );
 
         Quantity = quantity;
-        Descripton = descripton;
+        Description = description;
         UnitaryPrice = new Price(price);
         TotalValue = quantity * price;
     }

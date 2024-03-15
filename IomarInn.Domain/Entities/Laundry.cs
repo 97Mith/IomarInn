@@ -8,6 +8,7 @@ public sealed class Laundry : EntityBase
     public int StayId{ get; set; }
     public string Obs { get; private set; }
     public List<Product> Cloathes { get; private set; }
+    public decimal TotalLaundry { get; private set; }
 
     public Laundry(int id, int stayId, List<Product> cloathes, string obs = "...")
     {
@@ -28,5 +29,6 @@ public sealed class Laundry : EntityBase
         StayId = stayId;
         Obs = obs;
         Cloathes = cloathes;
+        TotalLaundry = Methods.CalculateTotalPrice(cloathes);
     }
 }

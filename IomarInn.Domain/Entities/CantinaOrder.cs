@@ -7,6 +7,7 @@ public sealed class CantinaOrder : EntityBase
 {
     public List<Product> Products { get; }
     public int CompanyId { get; set; }
+    public decimal TotalCantina { get; private set; }
 
     public CantinaOrder(int id, List<Product> products, int companyId)
     {
@@ -19,5 +20,7 @@ public sealed class CantinaOrder : EntityBase
         Id = id;
         CompanyId = id;
         Products = products;
+        TotalCantina = Methods.CalculateTotalPrice(products);
     }
+    
 }

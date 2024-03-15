@@ -4,6 +4,25 @@ namespace IomarInn.Domain.ValueObjects;
 
 public class Methods
 {
+    public static decimal CalculateTotalPrice(List<Product> products)
+    {
+        decimal totalPrice = 0;
+        foreach (var product in products)
+        {
+            totalPrice += product.UnitaryPrice.Value;
+        }
+        return totalPrice;
+    }
+    
+    public static int CalculateStayDuration(DateTime checkIn, DateTime checkOut)
+    {
+        TimeSpan duration = checkOut - checkIn;
+        return (int)duration.TotalDays;
+    }
+    public static bool IsCheckOutAfterCheckIn(DateTime checkIn, DateTime checkOut)
+    {
+        return checkOut > checkIn;
+    }
     public static bool IsPhoneNumber(string phoneNumber)
     {
         string pattern = @"^\+(?:[0-9] ?){6,14}[0-9]$";
